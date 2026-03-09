@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>evets/streamphobia</title>
+    <link rel="icon" href="/images/icons/favicon.ico" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      id="theme-stylesheet"
+      href="/css/themes/default.css"
+    />
+    <link rel="stylesheet" href="/css/games.css" />
+
+    <script type="text/javascript" src="/js/jquery-3.6.3.min.js"></script>
+    <script type="text/javascript" src="/js/theme_select.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+  </head>
+
+  <body class="d-flex flex-column">
+    <div class="_header"></div>
+    <script>
+      PageSetup(true, "#nav-link-streamphobia", true);
+    </script>
+    <div class="_page-buttons"></div>
+
+    <main class="container-md d-flex flex-wrap flex-md-nowrap flex-md-fill">
+      <div id="game-left">
+        <div class="_game-info"></div>
+      </div>
+      <div id="game-right" class="flex-fill">
+        <div>
+          <div id="game-content">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/W0U9m5kS_Z0?si=oT_q3_5z6YUgA78K"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <h3>Responsibilities</h3>
+            <p>
+              From October to November 2025, I was assigned to AlterStaff's
+              prototype team on a consulting basis (and later as a Lead
+              Designer) to oversee the designs of a few prototypes. Streamphobia
+              is one of the prototypes we shipped under my design oversight.
+            </p>
+            <p>
+              Before I joined, the prototype team did not have a dedicated
+              designer. I playtested their original prototype, and overhauled
+              the entire design from scratch while keeping the core idea of the
+              project intact.
+            </p>
+            <hr />
+            <h3>Design Overhaul</h3>
+            <p>
+              I had to work with some restrictions on the existing theme of the
+              idea, which boiled down to the following cores:
+            </p>
+            <ul>
+              <li>A horror experience within a haunted mansion</li>
+              <li>LLM-powered Chat which interacts directly with gameplay</li>
+            </ul>
+            <div class="row">
+              <img
+                class="col-6"
+                src="/images/games/streamphobia/old_design.jpg"
+              />
+              <img class="col-6" src="/images/games/streamphobia/old_inv.png" />
+            </div>
+            <cap
+              >Old design had a heavy emphasis on survival horror elements such
+              as inventory & item pickups</cap
+            >
+            <p>
+              The original design had several issues that needed to be
+              addressed. I identified them as the following: 1.
+              <r
+                >core gameplay relied heavily on a sequence of puzzles which
+                were designed similarly to traditional game puzzles.</r
+              >
+              2.
+              <r
+                >Chat interaction is forced and only exist to serve as a way to
+                get hints, players did not need to rely on them at all.</r
+              >
+            </p>
+            <div class="row">
+              <img class="col-6" src="/images/games/streamphobia/env1.png" />
+              <img class="col-6" src="/images/games/streamphobia/env2.png" />
+            </div>
+            <cap>Original environment concepts</cap>
+            <p>
+              To address these issues, I pitched an idea based around what kinds
+              of interactions would a streamer have with the audience while in a
+              horror setting. The idea is to hide secrets that are barely
+              detectable so that the player has to rely on the help of Chat to
+              progress. The genre of anomaly finding game was the first to come
+              to mind.
+            </p>
+            <img class="col-12" src="/images/games/streamphobia/anomaly2.png" />
+            <cap>Sample anomaly</cap>
+            <p>
+              To further solidify the design I implemented the following
+              elements:
+            </p>
+            <ul>
+              <li>Looping levels</li>
+              <li>Non-Euclidean rooms</li>
+              <li>Anomalies that does not stand out until stared at</li>
+            </ul>
+            <div class="row">
+              <img
+                class="col-12 col-md-6"
+                src="/images/games/streamphobia/old_map.png"
+              />
+              <img
+                class="col-12 col-md-6"
+                src="/images/games/streamphobia/new_level.png"
+              />
+            </div>
+            <cap
+              >Old map based around puzzles vs. Simplified looping levels</cap
+            >
+            <img class="col-12" src="/images/games/streamphobia/non_eu.png" />
+            <cap
+              >Non-Euclidean rooms: environment alters when player hits specific
+              triggers</cap
+            >
+            <p>
+              Each of these elements are designed to make playthroughs flow well
+              even without hints, even though players have to rely on them to
+              actually make real progress. It strikes a balance at player
+              freedom / agency while offering the LLM a chance to guide the
+              players.
+            </p>
+            <hr />
+            <h3>Horror Exploration</h3>
+            <p>
+              During development, I worked closely with the dev team to come up
+              with technically unique ways to scare the player. Horror elements
+              in Streamphobia can be broken down into 3 categories:
+            </p>
+            <ul>
+              <li>
+                Enemy: the ghostly figure that physically tracks the player
+              </li>
+              <li>
+                Environment: the looped level itself which changes and adds new
+                unsettling elements randomly, to build atomosphere
+              </li>
+              <li>
+                Chat: chat often donates, lies, or straight up put jumpscares on
+                your screen
+              </li>
+            </ul>
+            <div class="row">
+              <img
+                class="col-12 col-md-4"
+                src="/images/games/streamphobia/jumpscare_system.png"
+              />
+              <img
+                class="col-12 col-md-4"
+                src="/images/games/streamphobia/altered_env.png"
+              />
+              <img
+                class="col-12 col-md-4"
+                src="/images/games/streamphobia/jumpscare_1.png"
+              />
+            </div>
+            <cap
+              >Diegetic jumpscares, altered environment, fullscreen
+              jumpscares</cap
+            >
+            <img
+              class="col-12"
+              src="/images/games/streamphobia/abomination.png"
+            />
+            <img class="col-12" src="/images/games/streamphobia/humanoid.png" />
+            <cap>Character art</cap>
+            <p>
+              The psychological factor of the player is one the most powerful
+              tools in horror. For that we designed the onboarding part to start
+              slow, building up the tension, before releasing it in the form of
+              a scripted jumpscare.
+            </p>
+            <p>
+              Jumpscares are also designed to be interchangable, based on the
+              player location, enemy states, and how frequent it should be
+              triggered, based on the current level loop.
+            </p>
+            <div class="row">
+              <img
+                class="col-6"
+                src="/images/games/streamphobia/jumpscare_objects.png"
+              />
+              <img
+                class="col-6"
+                src="/images/games/streamphobia/jumpscare_component.png"
+              />
+            </div>
+            <cap
+              >Jumpscares are setup to be easily slottable across the
+              environment</cap
+            >
+            <hr />
+            <h3>LLM Integration</h3>
+            <p>
+              To address the issue that LLM Chat is far less significant than
+              expected in the original design, this time, I put Chat features at
+              the forefront. Not only players have to rely on Chat's guidance to
+              find the correct anomalies, they also have to interact with them
+              to please Chat, in order to win more accurate hints.
+            </p>
+            <p>
+              Inspired by "Favor" mechanic from AlterStaff's main game: Ai2U, I
+              pitched a similar system that aids the consistent build-up of a
+              relationship between player and Chat. The more the player is able
+              to entertain their audience, the easier the game becomes; and less
+              jumpscares they will encounter. This was mainly achieved via a
+              quest system where LLMs would be able to generate specific quests
+              for players to complete in order to win their favor.
+            </p>
+            <hr />
+            <h3>Reception & Improvements</h3>
+            <p>
+              Since release on AlterStaff's itch.io page, Streamphobia has
+              proven to be the most popular small-scaled project since Ai2U.
+              Many players voluntarily posted playthroughs, as seen below.
+            </p>
+            <div class="row">
+              <div class="col-6">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/iHf_l48yYXk?si=sxUkRoJ8pqP6YY8N"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="col-6">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/WU4-TI4XBHQ?si=zZSD4Gqqc5Xs6U6D"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="col-6">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/cNgu7UxUY40?si=fmgKuJczw46186TN"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="col-6">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/vFY9CGHRqMg?si=nh78f19HQdjThsZt"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <p>
+              Due to the extreme time and resource constraints we had with this
+              project, there were many things I would have liked to see improve
+              in further development, such as more accurately trained models,
+              better level designs, and smarter enemy AI. For me, one of the
+              biggest challenges that we had with the project was the LLM
+              intergration. It was still not significantly in the forefront
+              enough for me to proudly declare that to be a success. There are
+              many features I proposed which was left on the cutting room floor
+              such as accurate Chat spams, airdrops, and unique Chatters or
+              Trolls.
+            </p>
+            <div class="row">
+              <img
+                class="col-12 col-md-6"
+                src="/images/games/streamphobia/review1.png"
+              />
+              <img
+                class="col-12 col-md-6"
+                src="/images/games/streamphobia/review2.png"
+              />
+              <img
+                class="col-12 col-md-6"
+                src="/images/games/streamphobia/review3.png"
+              />
+              <img
+                class="col-12 col-md-6"
+                src="/images/games/streamphobia/review4.png"
+              />
+            </div>
+            <hr />
+            <h3>Appreciation</h3>
+            <p>
+              Many of the prototype team members who have collaborated with me
+              are super talented individuals who have been intergral to this
+              project's release.
+              <r
+                >Please check them out in supporting the game and their work! </r
+              ><3
+            </p>
+            <div class="indent">
+              <p>
+                <a href="https://www.sambeckmann.com/" target="_blank"
+                  >Sam Beckmann</a
+                >, Producer<br />
+                <a
+                  href="https://robbiereddick.wixsite.com/robreddick/portfolio/"
+                  target="_blank"
+                  >Robert Reddick</a
+                >, Programmer (Horror Systems)<br />
+                <a href="https://jefferyxyc.com/" target="_blank">Yuchen Xue</a
+                >, Programmer (Gameplay)<br />
+                <a href="https://leojiplayground.com/" target="_blank"
+                  >Shutong Ji</a
+                >, Programmer (LLM)<br />
+                <a href="https://lulu-xu.com/portfolio-2" target="_blank"
+                  >Lulu Xu</a
+                >, Artist
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="_footer"></div>
+
+    <script>
+      GameInfoSetup(
+        "Streamphobia",
+        "2025",
+        "Unity 3D",
+        "AlterStaff Inc.",
+        "Full-time",
+        "Find anomalies in a huanted house while LLM chat gives you tips.",
+        true,
+        "https://alterstaff.itch.io/streamphobia",
+        1,
+        "../games/other-games.html",
+        "../games/ai2u.html",
+        "#ff0000",
+      );
+
+      GamePageTabs([
+        // "../games/ritual_night_pages/ritual_night_page_1.html",
+        // "../games/ritual_night_pages/ritual_night_page_2.html",
+        // "../games/ritual_night_pages/ritual_night_page_3.html",
+        // "../games/ritual_night_pages/ritual_night_page_4.html",
+        // "../games/ritual_night_pages/ritual_night_page_5.html",
+        // "../games/ritual_night_pages/ritual_night_page_6.html",
+      ]);
+    </script>
+  </body>
+</html>

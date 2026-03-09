@@ -181,6 +181,8 @@ function GamePageSetup(left, right) {
   $("._page-buttons").load("/master_htmls/page-buttons.html", function () {
     $(".pb-left").attr("href", left == "none" ? "#" : left);
     $(".pb-right").attr("href", right == "none" ? "#" : right);
+    $(".pb-left-name").html(left == "none" ? "" : left.split('/')[2]);
+    $(".pb-right-name").html(right == "none" ? "" : right.split('/')[2]);
     if (left == "none") {
       $(".pb-left").removeAttr("href").addClass("disabled");
     }
