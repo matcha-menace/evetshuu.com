@@ -120,7 +120,7 @@ function PageSetup(showSocial, currentPageNavLink, isCat) {
     $("#header-social").addClass(showSocial ? "" : "d-md-none");
     $("#header-cat").addClass(isCat ? "" : "d-none");
     $("#header-stuff").addClass(isCat ? "d-none" : "");
-    $("#header-hamburger").addClass(isCat ? "" : "d-none");
+    $("#header-hamburger").addClass(isCat ? "" : "d-md-none");
     LoadSvgs();
     // stuff logo animation
     $("#header-stuff")
