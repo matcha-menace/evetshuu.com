@@ -56,14 +56,19 @@
   height: 100%;
   top: 0px;
   left: 0px;
-  transition: width 0.12s ease-out, height 0.12s ease-out, top 0.12s ease-out,
+  transition:
+    width 0.12s ease-out,
+    height 0.12s ease-out,
+    top 0.12s ease-out,
     left 0.12s ease-out;
   animation: none;
 }
 .game-tab a div {
   border-radius: 10px;
   box-shadow: none;
-  transition: box-shadow 0.2s ease-out, border 0.2s ease-out;
+  transition:
+    box-shadow 0.2s ease-out,
+    border 0.2s ease-out;
   border: 2px solid var(--color-g);
   color: var(--color-w);
   background-color: var(--color-b);
@@ -150,7 +155,7 @@
 
 /* page buttons */
 #game-page-buttons {
-  transform: translate(0, 20px);
+  padding-top: 20px;
 }
 .page-buttons {
   border: 1px solid var(--color-w);
