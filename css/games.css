@@ -41,7 +41,7 @@
     --rotate: 360deg;
   }
 }
-.game-tab a div::before {
+.game-tab a div:not(.coming-soon-overlay)::before {
   content: "";
   border-radius: 12px;
   background-image: linear-gradient(
@@ -63,7 +63,7 @@
     left 0.12s ease-out;
   animation: none;
 }
-.game-tab a div {
+.game-tab a div:not(.coming-soon-overlay) {
   border-radius: 10px;
   box-shadow: none;
   transition:
@@ -75,7 +75,7 @@
   padding-bottom: 4px !important;
   position: relative;
 }
-.game-tab a div::after {
+.game-tab a div:not(.coming-soon-overlay)::after {
   position: absolute;
   content: "";
   top: 5%;
@@ -94,14 +94,14 @@
   transition: opacity 0.5s;
   animation: card-spin 2.5s linear infinite;
 }
-.game-tab a:not(.unfinished):hover div::before {
+.game-tab a:not(.unfinished):hover div:not(.coming-soon-overlay)::before {
   animation: card-spin 2.5s linear infinite;
   top: -4px;
   left: -4px;
   width: calc(100% + 8px);
   height: calc(100% + 8px);
 }
-.game-tab a:not(.unfinished):hover div::after {
+.game-tab a:not(.unfinished):hover div:not(.coming-soon-overlay)::after {
   opacity: 0.5;
 }
 /* end hover animations */
@@ -166,6 +166,7 @@
   border-radius: 4px;
   text-decoration: none;
   font-size: 16px;
+  background-color: var(--color-b);
   transition: background-color 0.2s;
   color: var(--color-y);
 }

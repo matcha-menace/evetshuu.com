@@ -290,27 +290,70 @@
             >
               <div class="p-2 game-tab">
                 <a
-                  href="https://store.steampowered.com/app/3766120/Brainrot_Game/"
-                  target="_blank"
                   title="in development"
                   data-bs-toggle="tooltip"
                   data-bs-custom-class="unfinished-tooltip"
                   data-bs-placement="top"
+                  onclick="
+                    $('#br-overlay').removeClass('d-none');
+                    $('#br-overlay').addClass('d-flex');
+                  "
+                  onpointerleave="
+                    $('#br-overlay').addClass('d-none');
+                    $('#br-overlay').removeClass('d-flex')
+                  "
                 >
                   <div>
                     <img
                       alt="hyperstars_splash"
                       src="../images/games/brainrot_splash.webp"
+                      style="cursor: pointer"
                     />
                     <img
                       height="100%"
                       src="../images/games/brainrot/br_splash_gif.gif"
                       class="behind-splash"
+                      style="cursor: pointer"
                     />
+                    <div
+                      style="
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                        background: rgba(0, 0, 0, 0.4);
+                        border: 0;
+                        backdrop-filter: blur(6px);
+                        cursor: pointer;
+                      "
+                      class="coming-soon-overlay d-none flex-column justify-content-center"
+                      id="br-overlay"
+                    >
+                      <p style="text-align: center">
+                        working on it!<br />check other games for portfolio
+                      </p>
+                      <div
+                        class="d-flex justify-content-center coming-soon-overlay"
+                      >
+                        <div class="coming-soon-overlay">
+                          <button
+                            onclick="
+                              window.open(
+                                'https://store.steampowered.com/app/3766120/Brainrot_Game/',
+                                '_blank',
+                              )
+                            "
+                            class="page-buttons"
+                          >
+                            or view the steam page early
+                            <span class="_svg-steam"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                     <h2 style="font-family: &quot;Franklin Gothic&quot;">
-                      BRAINROT <span style="font-size: small">GAME</span>
-                      <span class="_svg-steam"></span
-                      ><span class="_svg-new-window"></span>
+                      BRAINROT GAME
+                      <span class="_svg-steam"></span>
                     </h2>
                   </div>
                 </a>
@@ -596,8 +639,12 @@
             </div>
           </div>
 
+          <!-- Extras -->
+          <!-- <br />
+          <h2 class="game-category-title">Extras</h2>
+          <hr class="rounded" /> -->
           <!-- extra button -->
-          <p class="d-none" style="text-align: center; color: var(--color-g)">
+          <p style="text-align: center; color: var(--color-g)">
             Secrets:
             <span
               id="extra-more"
@@ -617,8 +664,8 @@
                 );
               "
               style="color: var(--color-g)"
-              >click <span class="_svg-down"></span
-            ></span>
+              >click</span
+            >
             <span
               id="extra-close"
               class="index-expansion-buttons"
@@ -639,6 +686,16 @@
               style="color: var(--color-g)"
             ></span>
           </p>
+
+          <div id="index-extra" style="display: none; text-align: center">
+            <p>bamboozled</p>
+            <!-- <p>things I like:</p>
+            <p>
+              cats<br />books, dostoyevsky, andy weir, grrm<br />movies,
+              amelie<br />languages<br />legos<br />f1, cooking<br />making cool
+              shit
+            </p> -->
+          </div>
 
           <div class="header-prop"></div>
         </div>

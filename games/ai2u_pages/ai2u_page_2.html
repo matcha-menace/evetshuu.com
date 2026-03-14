@@ -1,1 +1,160 @@
-<p><r>Under construction</r></p>
+<h3>Preface</h3>
+<p>
+  The original Level 2 of Ai2U was a challenging prototype quickly put together
+  by a single designer with minimum dev support. It was plagued by many issues
+  that boiled down to:
+</p>
+<ul>
+  <li>Unclear player goals and feedback</li>
+  <li>Overcomplicated design</li>
+  <li>Heavy reliance on LLM for narrative guidance</li>
+</ul>
+<p>
+  This resulted in a messy level leaving many players confused.
+  <r>My job was to completely overhaul the level</r> based on player feedback,
+  <r
+    >while keeping the core theme and overall progression intact to minimize dev
+    and art workload</r
+  >.
+</p>
+
+<hr />
+<h3>Process</h3>
+<p>The task sounded daunting but the steps to approach it were clear.</p>
+<p>
+  <r>First,</r> I conducted a whole day of extensive playtest to document any
+  and all frictions I found in the level.
+</p>
+<p>
+  Then I wrote down my findings and broke them down into manageable talking
+  points to address accordingly. I found that:
+</p>
+<div class="row">
+  <div class="col-6">
+    <h4 style="text-align: center">Issue</h4>
+    <img
+      src="/images/games/ai2u/level_2_1.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap>Unclear potion mechanics causing LLM to hallucinate</cap>
+    <img
+      src="/images/games/ai2u/level_2_2.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap>Poorly generated maze making endgame content a chore to navigate</cap>
+    <img
+      src="/images/games/ai2u/level_2_3.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap
+      >Puzzles are scattered across the entire level, which are fully accessible
+      from the start</cap
+    >
+    <img
+      src="/images/games/ai2u/level_2_4.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap
+      >Puzzles are barely guided, which requires a lot of guessing and LLMs tend
+      to be misleading</cap
+    >
+    <img
+      src="/images/games/ai2u/level_2_5.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap
+      >One of the puzzles have a confusing instant kill effect, killing many
+      runs</cap
+    >
+  </div>
+
+  <div class="col-6">
+    <h4 style="text-align: center">Solution</h4>
+    <img
+      src="/images/games/ai2u/level_2_6.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap
+      >Add clues in level to help explain potion mechanics, and make the
+      mechanic non-required for level progression</cap
+    >
+    <img
+      src="/images/games/ai2u/level_2_7.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap
+      >Fully redesign the maze to make end goal clear with a landmark, and
+      cinematic guidance</cap
+    >
+    <img
+      src="/images/games/ai2u/level_2_8.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap
+      >Make part of the level hidden behind a simpler puzzle, ease the players
+      into the puzzle progression</cap
+    >
+    <img
+      src="/images/games/ai2u/level_2_9.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap
+      >Additional narrative cues that directly relate to the puzzle
+      solutions</cap
+    >
+    <img
+      src="/images/games/ai2u/level_2_10.png"
+      style="width: 100%; height: auto !important"
+    />
+    <cap
+      >Remove the instant kill effect and replace with a guide to help focus on
+      level progression instead of this particular lore</cap
+    >
+  </div>
+</div>
+<p>
+  After writing down each proposed solution, I began by creating a pitch for the
+  team to both get everyone on the same page and to get feedback on scoping for
+  the redesign.
+</p>
+<img
+  src="/images/games/ai2u/level_2_11.png"
+  style="width: 100%; height: auto !important"
+/>
+<p>
+  After the short discussion, I adjusted each team member's tasks and planned
+  out the development progress along with our Lead Designer.
+</p>
+
+<hr />
+<h3>A<r>maze</r></h3>
+<p>
+  To help off-load dev team workload, I took on the maze rework myself. Working
+  with art team, I designed the overall visuals of the maze, it's final layout,
+  with a special touch of a landmark that can be seen through the fog to let the
+  players know where their end goal is.
+</p>
+<img
+  src="/images/games/ai2u/level_2_12.png"
+  style="width: 100%; height: auto !important"
+/>
+<p>
+  I reworked the maze generation code personally to add more variety in maze
+  visuals and performance enhancements.
+</p>
+<img
+  src="/images/games/ai2u/level_2_13.png"
+  style="width: 100%; height: auto !important"
+/>
+
+<hr />
+<h3>Reception</h3>
+<p>
+  The entire rework took about 2 months in total from idea to ship. Once
+  shipped, the players immediately praised the improved level and it helped in
+  revitalizing the core player base.
+</p>
+<img
+  src="/images/games/ai2u/level_2_14.png"
+  style="width: 100%; height: auto !important"
+/>
